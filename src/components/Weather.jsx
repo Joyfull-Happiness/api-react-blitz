@@ -1,4 +1,4 @@
-function Weather({WeatherData}) {
+function Weather({dataThree}) {
   
     return (
       <div className="app">
@@ -6,7 +6,7 @@ function Weather({WeatherData}) {
         <div
           className="card-container"
           style={{
-            border: '.5rem solid #000000',
+            border: '.5rem solid #4D8EAB',
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',
@@ -15,9 +15,9 @@ function Weather({WeatherData}) {
           }}
         >
          
-            <div className="card" key={WeatherData.id}>
-              <h2>{WeatherData.volumeInfo.title}</h2>
-              <h2>{WeatherData.volumeInfo.authors}</h2>
+            <div className="card" >
+              <h2>{dataThree.tempreature}</h2>
+              <h2>{dataThree.windspeed}</h2>
             </div>
           
         </div>
