@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Books from './components/Books.jsx';
 import Advice from './components/Advice.jsx';
 import Weather from './components/Weather.jsx';
+import PokemonComp from './components/PokemonComp.jsx';
 
 
 /* above line 9 i am importing each component in order to send the data
@@ -19,6 +20,7 @@ function App() {
   const [books, setBooks] = useState([]);
   const [adviceData, setAdviceData] = useState([]);
   const [weatherData, setWeatherData] = useState([]);
+  const [pokemon, setPokemon] = useState([]);
 
 
 /* below are the useEffects going through each API call using the boiler plate code for useEffect
@@ -68,6 +70,21 @@ it also stops the useEffect from endlessly looping through the API and send send
       .catch((err) => console.log('Error fetching data:', err));
   }, []);
 
+
+
+    // useEffects Pokemon
+
+  useEffect(() => {
+    fetch(
+      'https://pokeapi.co/api/v2/pokemon?limit=5'
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setPokemon(data.results);
+      })
+      .catch((err) => console.log('Error fetching data:', err));
+  }, []);
+
   /* Below is the return statment telling the function that after setting up the variables, useState, and
   useEffect push the information to the DOM. 
   each API push to the dom is different but I will focus on the first:
@@ -106,6 +123,17 @@ it also stops the useEffect from endlessly looping through the API and send send
       <div className="card-container">
         <Weather dataThree={weatherData} />
 
+      </div>
+      <br></br>
+
+      <div className="card-container">
+       
+        <h2>Gotta Catch Them All! </h2>
+        {pokemon.map((pokemons, index) => (
+           <PokemonComp key={index} pokemonData={pokemons} />
+           
+           ))}
+      
       </div>
 
     </div>
