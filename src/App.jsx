@@ -76,7 +76,7 @@ it also stops the useEffect from endlessly looping through the API and send send
   .map is looping through each item in the array 
   Now using the arrow function we are doing the following with each loop of the book variable
   
-  1)
+  1)the books.map is looping through the list of books and sending it to the dom in the following way :
   2) through the key we are giving react a way to identtfy each componenet
   in the list and update the DOM (the cards showin on the webpage) 
   3) data={book} passes one boject from the API array sa a prop so

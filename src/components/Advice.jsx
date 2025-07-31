@@ -2,6 +2,17 @@
 //https://api.adviceslip.com/advice
 //Call the API and show the ID and advice back to the user
 
+/* 
+below is the Advice function a child component whwich is passing through the prop dataTwo 
+dataTwo is a prop from the APP.jsx file that passes through the data from the API call in the App.jsx
+to this function 
+
+then we are reurning to the DOM the html and css and what information we want to pass through 
+( <h4>{dataTwo.advice}</h4>) in this line we are saying we only want teh advice to be shown to 
+the user from the API call in the APP.jsx
+
+ */
+
 function Advice({dataTwo}) {
     
   
@@ -20,7 +31,7 @@ function Advice({dataTwo}) {
           }}
         >
             <div className="card">
-              <h2>{dataTwo.advice}</h2>
+              <h4>{dataTwo.advice}</h4>
               
             
             </div>
