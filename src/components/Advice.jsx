@@ -7,7 +7,7 @@ function Advice({dataTwo}) {
   
     return (
       <div className="app">
-        <h1>Advice</h1>
+        <h2>Advice</h2>
         <div
           className="card-container"
           style={{

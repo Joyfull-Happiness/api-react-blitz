@@ -3,7 +3,7 @@ function Books({data}) {
   
   return (
     <div className="app">
-      <h1>Harry Potter Books</h1>
+     
       <div
         className="card-container"
         style={{

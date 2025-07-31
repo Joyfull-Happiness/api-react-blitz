@@ -16,8 +16,8 @@ function Weather({dataThree}) {
         >
          
             <div className="card" >
-              <h2>{dataThree.tempreature}</h2>
-              <h2>{dataThree.windspeed}</h2>
+              <h2>Temperature: {dataThree.temperature}</h2>
+              <h2>Windspeed: {dataThree.windspeed}</h2>
             </div>
           
         </div>
